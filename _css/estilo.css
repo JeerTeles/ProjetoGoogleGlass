@@ -1,12 +1,56 @@
-
+@import url(http//fonts.googleapis.com/css?family=Titillium+Web);
+@font-face{
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
     body{
-    background-color: aliceblue;
-    color: black;    
+        background-color: gray;
+        color: black;    
+    }
+
+    div#interface{
+        width: 900px;
+        background-color: white;
+        margin: -20px auto 0px auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+        padding: 10px 10px 10px 10px;
     }
 
     p{
-    text-align: justify;
-    text-indent: 10px;
+        text-align: justify;
+        text-indent: 10px;
+    }
+
+    header#cabecalho img#icone{
+       position: absolute;
+       left: 900px;
+       top: 40px;
+       
+
+    }
+
+    header#cabecalho{
+        border-bottom: 1px #606060 solid; 
+        height: 150px;
+        background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+    }
+
+    header#cabecalho h1{
+        font-family: 'FonteLogo', sans-serif;
+        font-size: 30pt;
+        color: #606060;
+        text-shadow:  1px 1px 1px rgba(0, 0, 0, .6);
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    header#cabecalho h2{
+        font-family: 'Titillium Web', sans-serif;
+        color: #888888;
+        font-size: 15pt;
+        padding: 0px;
+        margin-top: 0px;
+
     }
 
     /* Formatação de imagens com legendas*/
@@ -44,11 +88,11 @@
     }
 
     nav#menu ul{
-      list-style: none; 
-      text-transform: uppercase;
-      position: absolute; 
-      top: -20px;
-      left: 300px;
+        list-style: none; 
+        text-transform: uppercase;
+        position: absolute; 
+        top: -20px;
+        left: 500px;
 
     }
 
@@ -57,8 +101,23 @@
         background-color: #dddddd;
         padding: 10px;
         margin: 2px;
+        transition: background-color 1s;
+    }
+
+    nav#menu li:hover{
+        background-color: #606060;
     }
     
     nav#menu h1{
         display: none;
+    }
+
+    nav#menu a{
+        color: black;
+        text-decoration: none;
+    }
+
+    nav#menu a:hover{
+        color: white;
+        text-decoration: underline;
     }
