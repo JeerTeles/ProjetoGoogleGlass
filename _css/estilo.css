@@ -4,12 +4,13 @@
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
     body{
+        font-family: Arial, sans-serif;
         background-color: gray;
         color: black;    
     }
 
     div#interface{
-        width: 900px;
+        width: 1200px;
         background-color: white;
         margin: -20px auto 0px auto;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
@@ -19,11 +20,22 @@
     p{
         text-align: justify;
         text-indent: 10px;
+        font-family: cursive;
+    }
+
+    a{
+        color: #606060;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover{
+        text-decoration: underline;
     }
 
     header#cabecalho img#icone{
        position: absolute;
-       left: 900px;
+       left: 1200px;
        top: 40px;
        
 
@@ -121,3 +133,122 @@
         color: white;
         text-decoration: underline;
     }
+
+    section#corpo{
+         display: block;
+         width: 500px;
+         float: left;
+         border-right: 1px solid #606060;
+         padding-right: 15px;
+    }
+
+    article#noticia-principal h2{
+        font-size: 13pt;
+        color: #606060;
+        background-color: #dddddd;
+        padding: 5px 0px 5px 10px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    header#cabecalho-artigo h1{
+        font-family:'FonteLogo';
+        font-size: 20pt;
+        color: #606060; 
+        margin-bottom: 0px;
+        margin-top: 0;
+    }
+
+    header#cabecalho-artigo h2{
+        font-size: 13pt;
+        color: #cecece;
+        background-color: #ffffff;
+        margin: 0px;
+      
+    }
+
+    header#cabecalho-artigo h3{
+        font-size: 13px;
+        color: #606060;
+
+    }
+
+    .direita{
+        text-align: right;
+    }
+
+    table#tabelaspec{
+        border: 1px solid #606060;
+        border-spacing: 0px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    table#tabelaspec td{
+        border: 1px solid #606060;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    table#tabelaspec td.ce{
+        color: white;
+        background-color: #606060;
+        vertical-align: top;
+        font-weight: bold;
+    }
+
+    table#tabelaspec td.cd{
+        background-color: #cecece;
+    }
+
+    table#tabelaspec caption{
+        color: #888888;
+        font-size: 13pt;
+        font-weight: bolder;
+    }
+
+    table#tabelaspec caption span{
+        display: block;
+        float: right;
+        color: black;
+        font-size: 8pt;
+        margin-top: 10px;   
+    }
+
+    aside#lateral{
+        display: block;
+        width: 550px;
+        float: right;
+        background-color: #dddddd;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 50px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    }
+
+    aside#lateral h1{
+        margin-top: 0px;
+        font-family: 'FonteLogo';
+        font-size: 20pt;
+        color: #606060;
+    }
+
+    aside#lateral h2{
+        background-color: #606060;
+        font-size: 13pt;
+        color: #ffffff;
+        padding: 5px;
+    }
+
+
+    footer#rodape{
+        clear: both;
+        border-top: 1px solid #606060;
+    }
+
+    footer#rodape p{
+        text-align: center;
+    }
+
