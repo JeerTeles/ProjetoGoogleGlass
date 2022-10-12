@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css"/>
 
 </head>
 <script language="javascript" src="_javascript/funcoes.js"></script>
@@ -30,40 +31,61 @@
                 </ul>
             </nav>
         </header>
-        
-Fale Conosco > Contatocontato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="direita">Atualizado em 30/Setembro/2022</h3>
+                    </hgroup>
+                </header>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+                <form>
+                   <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Digite seu nome"/></p>
+                        <p><label for="password">Senha:</label> <input type="password" name="senha" id="password" size="20" maxlength="10" placeholder="Digite sua senha"/></p>
+                        <p><label for="cEmail">E-mail:</label> <input type="email" name="email" id="cEmail" size="50" maxlength="50" placeholder="Digite seu email"/></p>
+                        <fieldset id="sexo">
+                            <legend>Sexo</legend>
+                            <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br/>
+                            <input type="radio" name="tSexo" id="cFem"/>  <label for="cFem">Feminino</label>
+                        </fieldset>    
+                        <p><label for="cDataNasc">Data de Nascimento:</label> <input type="date" name="dateNasc" id="cDataNasc"/></p>
+                    </fieldset>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+                    <fieldset id="enderco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="cEndereco" >Logradouro:</label> <input type="text" name="endereco" id="cEndereco" size="80" maxlength="80" placeholder="Digite o endereço"/></p>
+                        <p><label for="cNum">Número:</label> <input type="number" name="num" id="cNum" min="0" max="99999"/></p>
+                        <p><label for="cUf">Estado:</label> <input type="text" name="uf" id="cUf" size="3" max="3" placeholder="UF"/></p>
+                        <p><label for="cCidade">Cidade:</label> <input type="text" name="cidade" id="cCidade" size="15" maxlength="15" placeholder="Digite a cidade" /> </p>
+                    </fieldset>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                        Grau de Urgência:
+                        Mensagem:
+                    </fieldset>
+
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        Gostaria de adquirir um Google Glass quando disponível
+                        Cor:
+                        Quantidade:
+                        Preço Total: R$
+                    </fieldset>
 
 
-[BOTÃO ENVIAR]
+                    [BOTÃO ENVIAR]
+                </form>
+            </article>    
+        </section>                
 
+                        
 <footer id="rodape">
     <p> &copy; 2013 - by Jaderson Teles<br/>
 <a href="https://www.linkedin.com/in/jaderson-teles-168069237/" target="_blank">Linkedin</a> | <a href="https://github.com/JeerTeles" target="_blank" >GitHub</a></p>
