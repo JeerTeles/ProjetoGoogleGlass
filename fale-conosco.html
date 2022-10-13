@@ -43,7 +43,7 @@
                     </hgroup>
                 </header>
 
-                <form>
+                <form method="post" id="fContato" action="mailto:jadersoncontatos@gmail.com">
                    <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Digite seu nome"/></p>
@@ -57,30 +57,108 @@
                         <p><label for="cDataNasc">Data de Nascimento:</label> <input type="date" name="dateNasc" id="cDataNasc"/></p>
                     </fieldset>
 
-                    <fieldset id="enderco">
+                    <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
                         <p><label for="cEndereco" >Logradouro:</label> <input type="text" name="endereco" id="cEndereco" size="80" maxlength="80" placeholder="Digite o endereço"/></p>
                         <p><label for="cNum">Número:</label> <input type="number" name="num" id="cNum" min="0" max="99999"/></p>
-                        <p><label for="cUf">Estado:</label> <input type="text" name="uf" id="cUf" size="3" max="3" placeholder="UF"/></p>
-                        <p><label for="cCidade">Cidade:</label> <input type="text" name="cidade" id="cCidade" size="15" maxlength="15" placeholder="Digite a cidade" /> </p>
+                        <p><label for="cEstado">Estado:</label>
+                        <select name="estado" id="cEstado">
+                            <optgroup label="Suldeste">
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="ES">Espírito Santo</option>
+                            </optgroup>
+                            <optgroup label="Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                            </optgroup>
+                            <optgroup label="Nordeste">
+                                <option value="AL">Alagoas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="SE">Sergipe</option>
+                            </optgroup>
+                            <optgroup label="Centro-Oeste">
+                                <option value="DF">Distrito Federal</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                            </optgroup>
+                            <optgroup label="Norte">
+                                <option value="AM">Amazonas</option>
+                                <option value="AC">Acre</option>
+                                <option value="RR">Roraima</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="AP">Amapá</option>
+                                <option value="PA">Pará</option>
+                                <option value="TO">Tocantins</option>
+                            </optgroup>
+                        </select></p>
+                        <p><label for="cCidade">Cidade:</label>
+                        <input type="text" name="cidade" id="cCidade" size="15" maxlength="15" placeholder="Digite a cidade" list="cidades"/></p>
+                        <datalist id="cidades">
+                            <option value="Salvador"></option>
+                            <option value="Abaíra"></option>
+                            <option value="Água Fria"></option>
+                            <option value="Amargosa"></option>
+                            <option value="Andaraí"></option>
+                            <option value="Barreiras"></option>
+                            <option value="Belmonte"></option>
+                            <option value="Brejões"></option>
+                            <option value="Cachoeira"></option>
+                            <option value="Camamu"></option>
+                            <option value="Camaçari"></option>
+                            <option value="Candeias"></option>
+                            <option value="Dias D' Ávila"></option>
+                            <option value="Entre Rios"></option>
+                            <option value="Esplanada"></option>
+                            <option value="Feira de Santana"></option>
+                            <option value="Governador Mangabeira"></option>
+                            <option value="Irará"></option>
+                            <option value="Itaparica"></option>
+                            <option value="Jacobina"></option>
+                            <option value="Lage"></option>
+                            <option value="Madred de Deus"></option>
+                            <option value="Nilo Peçanha"></option>
+                            <option value="Olinda"></option>
+                            <option value="Pedrão"></option>
+                            <option value="Ribeira do Pombal"></option>
+                            <option value="Salinas da Margaridas"></option>
+                            <option value="São Felix"></option>
+                            <option value="São Francisco do Conde"></option>
+                            <option value="Taperoá"></option>
+                            <option value="Teodoro Sampaio"></option>
+                            <option value="Valença"></option>
+                            <option value="Xique-Xique"></option>
+                        </datalist>
                     </fieldset>
 
                     <fieldset id="mensagem">
                         <legend>Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
+                        <p><label for="cUrgencia">Grau de Urgência:</label> Min<input type="range" name="urgencia" id="cUrgencia" min="0" max="10" step="2"/>Max</p>
+                        <p><label for="cMensagem">Mensagem:</label><textarea name="mensagem" id="cMensagem" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
                     </fieldset>
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+                        <fieldset id="sn">
+                            <legend>Gostaria de adquiri um Google Glass quando disponivel</legend>
+                            <input type="radio" name="tEscolha" id="cSim"/> <label for="cSim">Sim</label> 
+                            <input type="radio" name="tEscolha" id="cNao"/> <label for="cNao">Nao</label><br>
+                            <p><label for="cCor">Cor</label> <input type="text" name="tCor" id="cCor" size="10" maxlength="10"/></p>
+                            <p><label for="cQuantidade">Quantidade</label> <input type="number" name="tQuantidade" id="cQuantidade"  min="1" max="999"/></p>
+                            <p><label for="cPreco">Preco</label> <input type="text" name="tPreco" id="cPreco" size="11" maxlength="11"/></p>
+                            <p><label for="cPrecoTotal">Preço Total</label> <input type="text0" name="tPrecoTotal" id="cPrecoTotal" size="11" max="11"/></p>
+                            <input type="submit" name="Enviar"/>
+                        </fieldset>
                     </fieldset>
-
-
-                    [BOTÃO ENVIAR]
                 </form>
             </article>    
         </section>                
