@@ -7,9 +7,8 @@
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" href="_css/estilo.css">
     <link rel="stylesheet" href="_css/form.css"/>
-
+    <script language="javascript" src="_javascript/funcoes.js"></script>
 </head>
-<script language="javascript" src="_javascript/funcoes.js"></script>
 <body>
     <div id="interface">
         <header id="cabecalho">
@@ -43,7 +42,7 @@
                     </hgroup>
                 </header>
 
-                <form method="post" id="fContato" action="mailto:jadersoncontatos@gmail.com">
+                <form method="post" id="fContato" action="mailto:jadersoncontatos@gmail.com" oninput="calc_total();">
                    <fieldset id="usuario">
                         <legend>Identificação do Usuário</legend>
                         <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Digite seu nome"/></p>
@@ -148,16 +147,11 @@
 
                     <fieldset id="pedido">
                         <legend>Quero um Google Glass</legend>
-                        <fieldset id="sn">
-                            <legend>Gostaria de adquiri um Google Glass quando disponivel</legend>
-                            <input type="radio" name="tEscolha" id="cSim"/> <label for="cSim">Sim</label> 
-                            <input type="radio" name="tEscolha" id="cNao"/> <label for="cNao">Nao</label><br>
-                            <p><label for="cCor">Cor</label> <input type="text" name="tCor" id="cCor" size="10" maxlength="10"/></p>
-                            <p><label for="cQuantidade">Quantidade</label> <input type="number" name="tQuantidade" id="cQuantidade"  min="1" max="999"/></p>
-                            <p><label for="cPreco">Preco</label> <input type="text" name="tPreco" id="cPreco" size="11" maxlength="11"/></p>
-                            <p><label for="cPrecoTotal">Preço Total</label> <input type="text0" name="tPrecoTotal" id="cPrecoTotal" size="11" max="11"/></p>
-                            <input type="submit" name="Enviar"/>
-                        </fieldset>
+                        <input type="checkbox" name="pedido" id="cPedido" checked /> <label for="cPedido">Gostaria de adquiri um Google Glass quando disponivel</label>
+                        <p><label for="cCor">Cor</label> <input type="color" value="#f74002" name="tCor" id="cCor" size="10" maxlength="10"/></p>
+                        <p><label for="cQtd">Quantidade</label> <input type="number" name="tQtd" id="cQtd"  min="1" max="5" value="0"/></p>
+                        <p><label for="cTot">Preço Total</label> <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly/></p>
+                        <input type="submit" value="Enviar"/>
                     </fieldset>
                 </form>
             </article>    
